@@ -15,9 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include 
+from mobile.views import qrcode 
 
 urlpatterns = [
    # path('admin/', admin.site.urls),
-   path('', include("web.urls")),                # order system from customer 
+   #path('',qrcode.index,name="qr_index"),
+   path('myweb/', include("web.urls")),                # order system from customer 
    path('myadmin/', include("myadmin.urls")),     # back management side 
+   path('mobile/',include("mobile.urls")),
 ]

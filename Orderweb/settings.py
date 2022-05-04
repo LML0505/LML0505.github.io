@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'myadmin',
     'web',
+    'mobile',
+    'qr_code',
 ]
 
 MIDDLEWARE = [
@@ -50,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'myadmin.shopmiddleware.ShopMiddleware',  # middleware for admin login out 
 ]
 
 ROOT_URLCONF = 'Orderweb.urls'
